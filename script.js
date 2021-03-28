@@ -7,6 +7,11 @@ function compute()
 	r = document.getElementById ("rate").value;
 	t = document.getElementById ("years");
 
+	if (p <= 0) {
+		alert ("Enter a positive number"); 
+		return false;
+	}
+
 	def_text = "";
 	yr=t.options[t.selectedIndex].value;
 
@@ -23,5 +28,3 @@ function compute()
 	document.getElementById ('result').innerHTML = def_text;
 
 }
-
-
